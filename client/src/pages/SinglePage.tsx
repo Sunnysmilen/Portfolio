@@ -1,3 +1,4 @@
+import ContactForm from "../components/SinglePage/ContactForm";
 import Etudes from "../components/SinglePage/Etudes";
 import Experiences from "../components/SinglePage/Experiences";
 import Homepage from "../components/SinglePage/Homepage";
@@ -14,7 +15,8 @@ export default function SinglePage() {
         <Project />
         <Technologies />
         <Etudes />
-        <Experiences/>
+        <Experiences />
+        <ContactForm />
       </div>
     </>
   );
