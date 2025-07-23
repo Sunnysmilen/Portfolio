@@ -20,7 +20,7 @@ export function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="fourthsection" smooth={true} duration={500}>
+          <Link to="technologies" smooth={true} duration={500}>
             Fourth Section
           </Link>
         </li>
