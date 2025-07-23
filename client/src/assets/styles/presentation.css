@@ -1,0 +1,30 @@
+.section_presentation {
+  background-color: #f2dff6;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.Title {
+  color: white;
+  font-size: 2.5em;
+  background-color: #c876f4;
+  display: flex;
+  justify-content: flex-end;
+  width: 70%;
+  position: absolute;
+  top: 22em;
+  right: 0.5em;
+  padding: 10px 20px;
+  border-radius: 0 2em;
+}
+
+.Avatar {
+  width: 80%;
+  border-radius: 2em;
+}
+
+.presentation_description {
+  margin: 2em;
+  padding: 2em;
+}
