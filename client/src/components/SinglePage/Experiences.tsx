@@ -1,13 +1,13 @@
 import { Element } from "react-scroll";
 
-export default function Etudes() {
+export default function Experiences() {
   return (
     <>
-      <Element name="etudes">
+      <Element name="experiences">
         <section>
           <header>Expériences</header>
           <section>
-            <h1>Diplômes</h1>
+            <h1>Job</h1>
             <h2>Etablissements</h2>
             <h3>Dates</h3>
             <button type="button">Découvrir plus</button>
