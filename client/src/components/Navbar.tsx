@@ -29,6 +29,11 @@ export function Navbar() {
             Etudes
           </Link>
         </li>
+        <li>
+          <Link to="experiences" smooth={true} duration={500}>
+            Expériences
+          </Link>
+        </li>
       </ol>
     </nav>
   );

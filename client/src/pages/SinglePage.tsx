@@ -1,4 +1,5 @@
 import Etudes from "../components/SinglePage/Etudes";
+import Experiences from "../components/SinglePage/Experiences";
 import Homepage from "../components/SinglePage/Homepage";
 import Presentation from "../components/SinglePage/Presentation";
 import Project from "../components/SinglePage/Project";
@@ -12,7 +13,8 @@ export default function SinglePage() {
         <Presentation />
         <Project />
         <Technologies />
-        <Etudes/>
+        <Etudes />
+        <Experiences/>
       </div>
     </>
   );
