@@ -4,12 +4,12 @@ import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router";
 
 import App from "./App";
-import Homepage from "./pages/Homepage";
+import SinglePage from "./pages/SinglePage";
 
 const router = createBrowserRouter([
   {
     element: <App />,
-    children: [{ path: "/", element: <Homepage /> }],
+    children: [{ path: "/", element: <SinglePage /> }],
   },
 ]);
 
@@ -21,5 +21,5 @@ if (rootElement == null) {
 createRoot(rootElement).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );
