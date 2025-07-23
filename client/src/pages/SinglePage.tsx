@@ -8,7 +8,7 @@ export default function SinglePage() {
       <div className="container">
         <Homepage />
         <Presentation />
-        <Project/>
+        <Project />
         <section id="fourthsection">
           <h1>Fourth Section</h1>
           <p>

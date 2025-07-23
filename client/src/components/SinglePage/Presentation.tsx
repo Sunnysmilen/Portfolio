@@ -1,5 +1,5 @@
 import { Element } from "react-scroll";
-import avatar from "../assets/images/avatar.jpeg";
+import avatar from "../../assets/images/avatar.jpeg";
 
 export default function Presentation() {
   return (

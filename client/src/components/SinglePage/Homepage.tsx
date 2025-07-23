@@ -1,5 +1,5 @@
 import { Element } from "react-scroll";
-import "../assets/styles/homepage.css";
+import "../../assets/styles/homepage.css";
 
 export default function Homepage() {
   return (
