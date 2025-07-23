@@ -16,12 +16,17 @@ export function Navbar() {
         </li>
         <li>
           <Link to="project" smooth={true} duration={500}>
-            Third Section
+            Projets{" "}
           </Link>
         </li>
         <li>
           <Link to="technologies" smooth={true} duration={500}>
-            Fourth Section
+            Technologies
+          </Link>
+        </li>
+        <li>
+          <Link to="etudes" smooth={true} duration={500}>
+            Etudes
           </Link>
         </li>
       </ol>
