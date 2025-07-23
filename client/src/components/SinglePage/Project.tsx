@@ -11,7 +11,7 @@ export default function Project() {
             <h1>Title projet</h1>
             <p>Techno utilisé</p>
             <button type="button">Découvrir plus</button>
-        {/* A la suite du clique : agrandissement de la carte pour voir la descritpion */}
+            {/* A la suite du clique : agrandissement de la carte pour voir la descritpion */}
             <p>Description du projet</p>
           </section>
         </section>
