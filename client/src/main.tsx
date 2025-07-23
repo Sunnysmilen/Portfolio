@@ -3,17 +3,15 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router";
 
-
 import App from "./App";
-
+import Homepage from "./pages/Homepage";
 
 const router = createBrowserRouter([
   {
-    path: "/", 
-    element: <App />, 
+    element: <App />,
+    children: [{ path: "/", element: <Homepage /> }],
   },
 ]);
-
 
 const rootElement = document.getElementById("root");
 if (rootElement == null) {
@@ -23,5 +21,5 @@ if (rootElement == null) {
 createRoot(rootElement).render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>,
+  </StrictMode>
 );

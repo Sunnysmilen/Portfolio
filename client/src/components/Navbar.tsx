@@ -5,8 +5,8 @@ export function Navbar() {
     <nav>
       <ol>
         <li>
-          <Link to="firstsection" smooth={true} duration={500}>
-            First Section
+          <Link to="/Homepage.tsx" smooth={true} duration={500}>
+            Homepage
           </Link>
         </li>
         <li>

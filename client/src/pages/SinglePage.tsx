@@ -1,8 +1,6 @@
-
 export default function SinglePage() {
   return (
     <>
-
       <div className="container">
         <section id="firstsection">
           <h1>First Section</h1>
@@ -12,7 +10,6 @@ export default function SinglePage() {
             quo inventore voluptatem officiis dicta, quae, quisquam dolor
             reiciendis suscipit. Voluptatibus illum repellat aperiam.
           </p>
-           
         </section>
         <section id="secondsection">
           <h1> Second Section</h1>
@@ -22,7 +19,6 @@ export default function SinglePage() {
             quo inventore voluptatem officiis dicta, quae, quisquam dolor
             reiciendis suscipit. Voluptatibus illum repellat aperiam.
           </p>
-          
         </section>
         <section id="thirdsection">
           <h1>Third Section</h1>
@@ -32,7 +28,7 @@ export default function SinglePage() {
             optio error commodi distinctio! Accusantium obcaecati, voluptatum
             quo inventore voluptatem officiis dicta, quae, quisquam dolor
             reiciendis suscipit. Voluptatibus illum repellat aperiam.
-          </p> 
+          </p>
         </section>
         <section id="fourthsection">
           <h1>Fourth Section</h1>
@@ -42,7 +38,6 @@ export default function SinglePage() {
             quo inventore voluptatem officiis dicta, quae, quisquam dolor
             reiciendis suscipit. Voluptatibus illum repellat aperiam.
           </p>
-          
         </section>
       </div>
     </>
