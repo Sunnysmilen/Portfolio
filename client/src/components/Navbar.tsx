@@ -15,7 +15,7 @@ export function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="thirdsection" smooth={true} duration={500}>
+          <Link to="project" smooth={true} duration={500}>
             Third Section
           </Link>
         </li>
