@@ -5,13 +5,13 @@ export function Navbar() {
     <nav>
       <ol>
         <li>
-          <Link to="/Homepage.tsx" smooth={true} duration={500}>
+          <Link to="homepage" smooth={true} duration={500}>
             Homepage
           </Link>
         </li>
         <li>
-          <Link to="secondsection" smooth={true} duration={500}>
-            Second Section
+          <Link to="presentation" smooth={true} duration={500}>
+            Présentation
           </Link>
         </li>
         <li>
