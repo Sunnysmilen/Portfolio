@@ -2,3 +2,13 @@
   margin: 0;
   padding: 0;
 }
+
+section {
+  height: 100vh; 
+  scroll-snap-align: start; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  padding: 2rem;
+  box-sizing: border-box;
+}
