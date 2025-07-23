@@ -36,6 +36,11 @@ candidat_id INT UNSIGNED,
 FOREIGN KEY (candidat_id) REFERENCES candidat(id)
 );
 
+INSERT INTO etudes (name, year, etablissement,candidat_id)
+VALUES
+  ("Développement Web",2025, "Wild Code School",1),
+    ("Auxiliaire de Puériculture",2018-2019, "Etienne Jules Marey",1);
+
 
 CREATE TABLE competences (
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -53,19 +58,26 @@ VALUES
 CREATE TABLE technologies (
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
 name VARCHAR(255) NOT NULL,
-logo VARCHAR(255) NOT NULL,
-competence_id INT UNSIGNED,
-FOREIGN KEY (competence_id) REFERENCES competences(id)
+logo VARCHAR(255) NOT NULL
 );
-
+INSERT INTO technologies (name, logo)
+VALUES
+  ("HTML", "null"),
+  ("CSS", "null"),
+  ("JavaScript", "null");
 
 CREATE TABLE skills (
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
-candidat_id INT UNSIGNED,
 technologies_id INT UNSIGNED,
-FOREIGN KEY (candidat_id) REFERENCES candidat(id),
+competence_id INT UNSIGNED,
+FOREIGN KEY (competence_id) REFERENCES competences(id),
 FOREIGN KEY (technologies_id) REFERENCES technologies(id)
 );
+
+INSERT INTO skills (technologies_id, competence_id)
+VALUES
+  (1,1),
+  (2, 2);
 
 CREATE TABLE projets (
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
@@ -75,3 +87,7 @@ skills_id  INT UNSIGNED,
 FOREIGN KEY (skills_id) REFERENCES skills(id)
 );
 
+INSERT INTO projets (projet, description,skills_id)
+VALUES
+  ("Wild Code Media", "Réseaux sociaux pour les développeurs",1),
+  ("CodexArt", "Rendre l'art accessible à tous",2);
