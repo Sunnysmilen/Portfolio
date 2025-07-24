@@ -39,8 +39,12 @@ export default function Project() {
               <p>{projet[index].description}</p>
             </section>
           )}
-          <button type="button" onClick={prev}>◀</button>
-          <button type="button" onClick={next}>▶</button>
+          <button type="button" onClick={prev}>
+            ◀
+          </button>
+          <button type="button" onClick={next}>
+            ▶
+          </button>
         </section>
       </Element>
     </>
