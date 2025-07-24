@@ -10,4 +10,71 @@ const browse: RequestHandler = async (req, res, next) => {
   }
 };
 
-export default { browse };
+// read
+const read: RequestHandler = async (req, res, next) => {
+  try {
+    const insertId = Number(req.params.id);
+    const home = await ProjetRepository.read(insertId);
+    if (home == null) {
+      res.sendStatus(404);
+    } else {
+      res.send(home);
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
+//edit
+const edit: RequestHandler = async (req, res, next) => {
+  try {
+    const home = {
+      id: Number(req.params.id),
+      projet: req.body.projet,
+      description: req.body.description,
+      skills_id: req.body.skills_id,
+      tech_categories: req.body.tech_categories,
+      tech_logo: req.body.tech_logo,
+      tech_name: req.body.tech_name,
+    };
+    const affectedRows = await ProjetRepository.update(home);
+    if (affectedRows == null) {
+      res.sendStatus(404);
+    } else {
+      res.sendStatus(204);
+    }
+  } catch (err) {
+    next(err);
+  }
+};
+
+//add
+const add: RequestHandler = async (req, res, next) => {
+  try {
+    const newproject = {
+      projet: req.body.projet,
+      description: req.body.description,
+      skills_id: req.body.skills_id,
+      tech_categories: req.body.tech_categories,
+      tech_logo: req.body.tech_logo,
+      tech_name: req.body.tech_name,
+    };
+    const insert = await ProjetRepository.create(newproject);
+    res.status(201).json({ insert });
+  } catch (err) {
+    next(err);
+  }
+};
+
+//delete
+
+const destroy: RequestHandler = async (req, res, next) => {
+  try {
+    const homeId = Number(req.params.id);
+    await ProjetRepository.delete(homeId);
+    res.sendStatus(204);
+  } catch (err) {
+    next(err);
+  }
+};
+export default { browse, read, edit, add, destroy };
