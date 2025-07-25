@@ -1,29 +1,44 @@
 import { Element } from "react-scroll";
+import "../../assets/styles/contact.css";
+import { ValidationError, useForm } from "@formspree/react";
 
 export default function ContactForm() {
+  const [state, handleSubmit] = useForm("xldlbjlw");
+  if (state.succeeded) {
+    return (
+      <p className="envoi_message">Merci, votre message a bien été envoyé !</p>
+    );
+  }
+
   return (
     <>
       <Element name="experiences">
         <section>
-          <header>Contact Form</header>
-          <form action="">
-            <label htmlFor="">Nom</label>
-            <input type="text" />
-            <label htmlFor="">Prénom</label>
-            <input type="text" />
-            <label htmlFor="">Email</label>
-            <input type="text" />
-            <select name="Objet" id="objet">
-              <option value="">Sujet de votre message</option>
-              <option value="entreprise">Entreprise</option>
-              <option value="entreprise">Entreprise</option>
-              <option value="questions">Questions</option>
-              <option value="autres sujets">Autres sujets</option>
-            </select>
-            <label htmlFor="">Message</label>
+          <header className="contact_section">Contact Form</header>
+          <form onSubmit={handleSubmit} className="contact_form ">
+            <label htmlFor="nom">Nom</label>
+            <input type="text" name="nom" required />
+            <ValidationError prefix="Nom" field="nom" errors={state.errors} />
 
-            <input type="text" />
-            <input type="submit" name="Envoyer" />
+            <label htmlFor="email">Email</label>
+            <input type="email" name="email" required />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
+            />
+
+            <label htmlFor="message">Message</label>
+            <textarea name="message" required />
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
+            />
+
+            <button type="submit" disabled={state.submitting}>
+              Envoyer
+            </button>
           </form>
         </section>
       </Element>
