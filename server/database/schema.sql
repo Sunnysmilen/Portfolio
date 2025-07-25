@@ -32,14 +32,15 @@ id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
 name VARCHAR(255) NOT NULL,
 year VARCHAR(20),
 etablissement VARCHAR(255) NOT NULL,
+synthese_etude TEXT NOT NULL,
 candidat_id INT UNSIGNED,
 FOREIGN KEY (candidat_id) REFERENCES candidat(id)
 );
 
-INSERT INTO etudes (name, year, etablissement,candidat_id)
+INSERT INTO etudes (name, year, etablissement,candidat_id,synthese_etude)
 VALUES
-  ("Développement Web",2025, "Wild Code School",1),
-    ("Auxiliaire de Puériculture",2018-2019, "Etienne Jules Marey",1);
+  ("Développement Web","2025", "Wild Code School",1, "Bootcamp intensive Développeur Web et Web Mobile (DWWM) d'une durée de 5 mois."),
+    ("Auxiliaire de Puériculture","2018-2019", "Etienne Jules Marey",1,"Formation de 1 an d'Auxiliare de Puériculture");
 
 
 CREATE TABLE competences (
