@@ -26,8 +26,8 @@ export default function Technologies() {
   return (
     <>
       <Element name="technologies">
-        <header>Compétences</header>
         <section>
+          <header className="technologie_section">Compétences</header>
           <section>
             <div className="button_container">
               {categories.map((cat) => (

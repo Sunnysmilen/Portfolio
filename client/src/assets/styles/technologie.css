@@ -1,3 +1,8 @@
+.technologie_section {
+  align-items: center;
+  gap: 2em;
+}
+
 .button_container {
   display: inline-flex;
   gap: 1em;

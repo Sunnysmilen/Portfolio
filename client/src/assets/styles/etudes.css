@@ -1,3 +1,7 @@
+.etude_section {
+  align-items: center;
+  gap: 2em;
+}
 .etude_container {
   gap: 2em;
   align-items: center;
