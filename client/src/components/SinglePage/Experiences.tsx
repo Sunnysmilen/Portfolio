@@ -1,19 +1,31 @@
+import { useEffect, useState } from "react";
 import { Element } from "react-scroll";
+import type experienceType from "../../../../server/src/Definitions/ExperienceType";
+import "../../assets/styles/Experiences.css";
 
 export default function Experiences() {
+  const [occupation, setOccupation] = useState<experienceType[]>([]);
+
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_API_URL}/experiences`)
+      .then((response) => response.json())
+      .then((data: experienceType[]) => {
+        setOccupation(data);
+      });
+  }, []);
+
   return (
     <>
       <Element name="experiences">
-        <section>
+        <section className="experience_container">
           <header>Expériences</header>
-          <section>
-            <h1>Job</h1>
-            <h2>Etablissements</h2>
-            <h3>Dates</h3>
-            <button type="button">Découvrir plus</button>
-            {/* A la suite du clique : agrandissement de la carte pour voir la descritpion */}
-            <p>Description expériences</p>
-          </section>
+          {occupation.map((o) => (
+            <section key={o.id} className="experience_card">
+              <h1 className="experience_poste">{o.poste}</h1>
+              <h2 className="experience_lieu">{o.lieu}</h2>
+              <h3 className="experience_annee">{o.annee}</h3>
+            </section>
+          ))}
         </section>
       </Element>
     </>

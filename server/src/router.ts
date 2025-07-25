@@ -1,6 +1,7 @@
 import express from "express";
 import EtudeActions from "../../server/src/modules/Etudes/EtudeActions";
 import ProjetAction from "../../server/src/modules/Projet/ProjetAction";
+import ExperienceActions from "./modules/experience/ExperienceActions";
 import HomepageActions from "./modules/homepage/HomepageActions";
 import technologieActions from "./modules/technologies/technologieActions";
 
@@ -14,5 +15,7 @@ router.get("/competences", technologieActions.browse);
 router.get("/competences", technologieActions.add);
 
 router.get("/etudes", EtudeActions.browse);
+
+router.get("/experiences", ExperienceActions.browse);
 
 export default router;

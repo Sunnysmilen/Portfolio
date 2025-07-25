@@ -42,6 +42,17 @@ VALUES
   ("Développement Web","2025", "Wild Code School",1, "Bootcamp intensive Développeur Web et Web Mobile (DWWM) d'une durée de 5 mois."),
     ("Auxiliaire de Puériculture","2018-2019", "Etienne Jules Marey",1,"Formation de 1 an d'Auxiliare de Puériculture");
 
+CREATE TABLE experiences (
+id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
+poste VARCHAR(255) NOT NULL,
+lieu TEXT NOT NULL,
+annee VARCHAR(20)
+);
+
+INSERT INTO experiences (poste, annee,lieu)
+VALUES
+("Responsable adjoint d'accueil et caisses","2023-2025","Monoprix Toits de Boulogne"),
+("Employée polyvalent","2018-2023","Monoprix Toits de Boulogne");
 
 CREATE TABLE competences (
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
