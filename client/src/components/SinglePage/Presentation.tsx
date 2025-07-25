@@ -21,9 +21,9 @@ export default function Presentation() {
   return (
     <>
       <Element name="presentation">
-        <header className="Title">A propos de moi</header>
         {presentation.map((user) => (
           <section key={user.id} className="section_presentation">
+            <header className="Title">A propos de moi</header>
             <img
               src={avatar}
               alt={`Avatar ${user.firstname} ${user.lastname}`}

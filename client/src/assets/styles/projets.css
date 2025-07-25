@@ -3,17 +3,8 @@
 }
 
 .projets {
-  color: white;
-  font-size: 2.5em;
-  background-color: #c876f4;
-  display: flex;
-  justify-content: center;
-  width: 70%;
-  position: absolute;
-  top: 41em;
-  left: 0.5em;
-  padding: 20px 10px;
-  border-radius: 2em 0;
+  align-items: center;
+  gap: 2em;
 }
 
 .card_projet {

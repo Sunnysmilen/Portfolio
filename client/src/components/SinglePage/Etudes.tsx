@@ -24,7 +24,7 @@ export default function Etudes() {
     <>
       <Element name="etudes">
         <section className="etude_container">
-          <header>Formations</header>
+          <header className="etude_section">Formations</header>
           {learn.map((l) => (
             <section key={l.id} className="etudes_card">
               <h1>{l.name}</h1>

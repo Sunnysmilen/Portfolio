@@ -18,7 +18,7 @@ export default function Experiences() {
     <>
       <Element name="experiences">
         <section className="experience_container">
-          <header>Expériences</header>
+          <header className="experience_section">Expériences</header>
           {occupation.map((o) => (
             <section key={o.id} className="experience_card">
               <h1 className="experience_poste">{o.poste}</h1>
