@@ -4,15 +4,25 @@ import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router";
 
 import App from "./App";
-import ContactForm from "./components/SinglePage/ContactForm";
-import SinglePage from "./pages/SinglePage";
+import ContactForm from "./pages/ContactForm";
+import Experiences from "./pages/Experiences";
+import Homepage from "./pages/Homepage";
+import Presentation from "./pages/Presentation";
+import Project from "./pages/Project";
+import Technologies from "./pages/Technologies";
 
 const router = createBrowserRouter([
   {
     element: <App />,
-    children: [{ path: "/", element: <SinglePage /> }],
+    children: [
+      { path: "/", element: <Homepage /> },
+      { path: "/presentation", element: <Presentation /> },
+      { path: "/projets", element: <Project /> },
+      { path: "/contact", element: <ContactForm /> },
+      { path: "/technologies", element: <Technologies /> },
+      { path: "/experiences", element: <Experiences /> },
+    ],
   },
-  { path: "/contact", element: <ContactForm /> },
 ]);
 
 const rootElement = document.getElementById("root");
