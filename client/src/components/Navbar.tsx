@@ -1,9 +1,9 @@
 import { Link } from "react-scroll";
-
+import "../assets/styles/Navbar.css"
 export function Navbar() {
   return (
-    <nav>
-      <ol>
+    <nav className="navbar_container">
+      <ul>
         <li>
           <Link to="homepage" smooth={true} duration={500}>
             Homepage
@@ -34,7 +34,7 @@ export function Navbar() {
             Expériences
           </Link>
         </li>
-      </ol>
+      </ul>
     </nav>
   );
 }
