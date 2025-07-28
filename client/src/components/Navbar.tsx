@@ -1,38 +1,26 @@
-import { Link } from "react-scroll";
-import "../assets/styles/Navbar.css"
+import { Link } from "react-router";
+import "../assets/styles/Navbar.css";
 export function Navbar() {
   return (
     <nav className="navbar_container">
       <ul>
         <li>
-          <Link to="homepage" smooth={true} duration={500}>
-            Homepage
-          </Link>
+          <Link to="/">Homepage</Link>
         </li>
         <li>
-          <Link to="presentation" smooth={true} duration={500}>
-            Présentation
-          </Link>
+          <Link to="presentation">Présentation</Link>
         </li>
         <li>
-          <Link to="project" smooth={true} duration={500}>
-            Projets{" "}
-          </Link>
+          <Link to="/projets">Projets</Link>
         </li>
         <li>
-          <Link to="technologies" smooth={true} duration={500}>
-            Technologies
-          </Link>
+          <Link to="/technologies">Technologies</Link>
         </li>
         <li>
-          <Link to="etudes" smooth={true} duration={500}>
-            Etudes
-          </Link>
+          <Link to="/experiences">Expériences</Link>
         </li>
         <li>
-          <Link to="experiences" smooth={true} duration={500}>
-            Expériences
-          </Link>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </nav>

@@ -28,8 +28,8 @@ const read: RequestHandler = async (req, res, next) => {
 const add: RequestHandler = async (req, res, next) => {
   try {
     const newTechno = {
-      // technologie_id: req.body.technologie_id,
-      // competence_id: req.body.competence_id,
+      technologie_id: req.body.technologie_id,
+      competence_id: req.body.competence_id,
       t_name: req.body.t_name,
       t_logo: req.body.t_logo,
       t_categories: req.body.t_categories,
@@ -46,11 +46,11 @@ const edit: RequestHandler = async (req, res, next) => {
   try {
     const editTech = {
       id: Number(req.params.id),
-       t_name: req.body.t_name,
-        t_logo: req.body.t_logo,
-        t_categories: req.body.t_categories,
-        // technologie_id: req.body.technologie_id,
-        // competence_id: req.body.competence_id,
+      t_name: req.body.t_name,
+      t_logo: req.body.t_logo,
+      t_categories: req.body.t_categories,
+      technologie_id: req.body.technologie_id,
+      competence_id: req.body.competence_id,
     };
     const affectedRows = await technologieRepository.update(editTech);
     if (affectedRows == null) {
@@ -72,4 +72,4 @@ const destroy: RequestHandler = async (req, res, next) => {
   }
 };
 
-export default { browse, read,add, edit,destroy };
+export default { browse, read, add, edit, destroy };

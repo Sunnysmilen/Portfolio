@@ -45,7 +45,7 @@ LEFT JOIN technologies ON skills.technologies_id = technologies.id`);
         skills.t_categories,
         skills.technologie_id,
         skills.competence_id,
-        skills.id
+        skills.id,
       ],
     );
     return result.affectedRows;
