@@ -32,10 +32,6 @@ const edit: RequestHandler = async (req, res, next) => {
       id: Number(req.params.id),
       projet: req.body.projet,
       description: req.body.description,
-      skills_id: req.body.skills_id,
-      tech_categories: req.body.tech_categories,
-      tech_logo: req.body.tech_logo,
-      tech_name: req.body.tech_name,
     };
     const affectedRows = await ProjetRepository.update(home);
     if (affectedRows == null) {
@@ -54,10 +50,6 @@ const add: RequestHandler = async (req, res, next) => {
     const newproject = {
       projet: req.body.projet,
       description: req.body.description,
-      skills_id: req.body.skills_id,
-      tech_categories: req.body.tech_categories,
-      tech_logo: req.body.tech_logo,
-      tech_name: req.body.tech_name,
     };
     const insert = await ProjetRepository.create(newproject);
     res.status(201).json({ insert });

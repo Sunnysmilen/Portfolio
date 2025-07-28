@@ -95,11 +95,10 @@ CREATE TABLE projets (
 id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT NOT NULL,
 projet VARCHAR(255) NOT NULL,
 description TEXT NOT NULL,
-skills_id  INT UNSIGNED,
-FOREIGN KEY (skills_id) REFERENCES skills(id)
+projet_url TEXT
 );
 
-INSERT INTO projets (projet, description,skills_id)
+INSERT INTO projets (projet, description)
 VALUES
-  ("Wild Code Media", "Réseaux sociaux pour les développeurs",1),
-  ("CodexArt", "Rendre l'art accessible à tous",2);
+  ("Wild Code Media", "Reseaux sociaux pour les développeurs"),
+  ("CodexArt", "Rendre l'art accessible à tous");

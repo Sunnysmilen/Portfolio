@@ -27,6 +27,39 @@ LEFT JOIN skills ON skills.competence_id = competences.id
 LEFT JOIN technologies ON skills.technologies_id = technologies.id`);
     return rows as technologieType[];
   }
+  async read(id: number) {
+    const [rows] = await databaclient.query<Rows>(
+      "select * from skills where id = ?",
+      [id],
+    );
+    return rows[0] as technologieType;
+  }
+
+  //update
+  async update(skills: technologieType) {
+    const [result] = await databaclient.query<Result>(
+      "UPDATE skills SET name = ?, logo = ?,categories = ?,technologie_id = ?,competence_id = ? WHERE id = ?",
+      [
+        skills.t_name,
+        skills.t_logo,
+        skills.t_categories,
+        skills.technologie_id,
+        skills.competence_id,
+        skills.id
+      ],
+    );
+    return result.affectedRows;
+  }
+
+  // DELETE
+
+  async delete(techID: number) {
+    const [result] = await databaclient.query<Result>(
+      "DELETE from projets where id = ?",
+      [techID],
+    );
+    return result.affectedRows;
+  }
 }
 
 export default new TechnologieRepository();

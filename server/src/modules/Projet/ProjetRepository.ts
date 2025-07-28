@@ -5,26 +5,14 @@ class ProjetRepository {
   // create
   async create(projets: Omit<projetType, "id">) {
     const [result] = await databaclient.query<Result>(
-      "INSERT INTO projets (projet,description,skills_id,tech_categories,tech_logo,tech_name) VALUES (?,? ,?,?,?,?)",
-      [
-        projets.projet,
-        projets.description,
-        projets.skills_id,
-        projets.tech_categories,
-        projets.tech_logo,
-        projets.tech_name,
-      ],
+      "INSERT INTO projets (projet,description) VALUES (?,?)",
+      [projets.projet, projets.description],
     );
     return result.insertId;
   }
 
   async readAll() {
-    const [rows] =
-      await databaclient.query<Rows>(`SELECT projets.*,technologies.name AS tech_name, technologies.logo AS tech_logo,
-        competences.categories AS tech_categories FROM projets        
-        INNER JOIN skills ON projets.skills_id = skills.id
-        INNER JOIN  technologies ON skills.technologies_id = technologies.id
-        INNER JOIN competences ON skills.competence_id = competences.id`);
+    const [rows] = await databaclient.query<Rows>("SELECT * FROM projets");
     return rows as projetType[];
   }
 
@@ -39,17 +27,10 @@ class ProjetRepository {
   //update
   async update(projet: projetType) {
     const [result] = await databaclient.query<Result>(
-      "UPDATE projets SET projet = ?, description = ?,skills_id = ?,tech_categories = ?,tech_logo = ?,tech_name = ? where id = ?",
-      [
-        projet.projet,
-        projet.description,
-        projet.skills_id,
-        projet.tech_categories,
-        projet.tech_logo,
-        projet.tech_name,
-        projet.id,
-      ],
+      "UPDATE projets SET projet = ?, description = ? where id = ?",
+      [projet.projet, projet.description, projet.id],
     );
+
     return result.affectedRows;
   }
 

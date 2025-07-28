@@ -1,0 +1,31 @@
+.navbar_container {
+  background-color: #dcb5f1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar_container ul {
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+.navbar_container li {
+  list-style: none;
+}
+
+.navbar_container a:hover {
+  color: #f2b22c;
+  cursor: pointer;
+}
+
+.navbar_container a:focus {
+  outline: 2px solid #f2b22c;
+  outline-offset: 2px;
+}
