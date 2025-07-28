@@ -1,0 +1,25 @@
+.firstname_lastname {
+  font-size: 2.5em;
+}
+
+.Home {
+  background-color: #c876f4;
+  color: white;
+  text-align: center;
+  gap: 1.5em;
+}
+
+.introduction {
+  margin: 1.5em;
+}
+
+.button_contact_moi {
+  padding: 1em;
+  border-radius: 1em;
+  border: none;
+}
+
+.button_contact_moi:hover {
+  background-color: #f2b22c;
+  color: white;
+}

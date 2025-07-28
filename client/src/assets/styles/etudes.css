@@ -1,0 +1,24 @@
+.etude_section {
+  align-items: center;
+  gap: 2em;
+}
+.etude_container {
+  gap: 2em;
+  align-items: center;
+}
+
+.etudes_card {
+  background-color: #f2dff6;
+  width: 80%;
+  border-radius: 2em;
+}
+
+.decouvrir_plus {
+  width: 30%;
+  padding: 1em;
+  background-color: #f2b22c;
+  color: white;
+  border: none;
+  border-radius: 1em;
+  align-self: flex-end;
+}

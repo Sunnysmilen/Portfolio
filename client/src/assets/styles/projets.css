@@ -1,0 +1,44 @@
+.section_projets {
+  padding: 2em;
+}
+
+.projets {
+  align-items: center;
+  gap: 2em;
+}
+
+.group_button_actions {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  position: relative;
+  margin: 3em;
+}
+
+/* buttons action: add / edit / delete */
+.group_button_actions button {
+  background-color: #dcb5f1;
+  color: white;
+  border: none;
+  padding: 0.8em;
+  border-radius: 2em;
+}
+
+.group_button_actions button:hover {
+  background-color: #f2b22c;
+  cursor: pointer;
+}
+
+.card_projet {
+  background-color: antiquewhite;
+  margin: 2em;
+  width: 80%;
+  height: 300px;
+  border-radius: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+}

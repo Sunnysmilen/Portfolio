@@ -1,0 +1,21 @@
+.section_presentation {
+  background-color: #f2dff6;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.Title {
+  align-items: center;
+  gap: 2em;
+}
+
+.Avatar {
+  width: 50%;
+  border-radius: 2em;
+}
+
+.presentation_description {
+  margin: 2em;
+  padding: 2em;
+}
